@@ -1,0 +1,155 @@
+.d-none {
+    display: none !important;
+}
+
+.mainframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+.cartframe {
+    opacity: 0.85;
+    position: relative;
+    height: 620px;
+    width: 320px;
+    border-radius: 24px;
+}
+
+.cartheader {
+    padding-top: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartbtn {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.cartbtn img:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: 8px;
+}
+
+.one {
+    display: flex;
+    justify-content: space-between;
+}
+
+.two {
+    display: flex;
+    flex-direction: column;
+}
+
+.three {
+    display: flex;
+}
+
+.pokeID {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.pokeName {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.pokeTyp {
+    border: 1px dotted black;
+    padding: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.pokeImges {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    box-sizing: border-box;
+}
+
+.pokeImgBG {
+    position: absolute;
+    z-index: 3;
+    height: 100%;
+}
+
+.pokeImg {
+    position: absolute;
+    z-index: 4;
+    height: 100%;
+    bottom: 8px;
+}
+
+
+/*############## Zweiter Bereich ######################*/
+
+.statsframe {
+    position: absolute;
+    bottom: 0;
+    border-radius: 24px;
+    background-color: aliceblue;
+    height: 340px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.statsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+    margin-top: 32px;
+}
+
+.linkframe {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: gray 1px solid;
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+.linkframe span {
+    cursor: pointer;
+}
+
+.linkframe span:hover {
+    font-weight: bolder;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    height: 40px;
+}
+
+td {
+    min-width: 120px;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+
+    <title>Pokedex</title>
+    <link rel="icon" type="image/x-icon" href="../img/pokeball.png">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/pokemonCart.css">
+    <link rel="stylesheet" href="../style/colors.css">
+    <link rel="stylesheet" href="../style/load.css">
+
+    <script src="../js/loader.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/pokemonCart.js"></script>
+    <script src="../js/switchtypes.js"></script>
+    <script src="../js/pokeSounds.js"></script>
+    <script src="../js/favorites.js"></script>
+    <script src="../js/sortBy.js"></script>
+
+    <noscript>Your browser does not support JavaScript!</noscript>
+</head>
+
+<body id="body" onload="init()">
+
+    <div id="page-loader" class="page-loader">
+        <div class="update-loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h2>Loading Pokemon ...</h2>
+    </div>
+
+    <header>
+        <img class="pokedex_logo" src="../img/PokedexBild.png" alt="pokedex" onclick="sortById()">
+        <img id="pokemon_logo" src="../img/logo.png" alt="PokemonLogo" onclick="playingAudio()">
+        <input type="search" name="search" id="search">
+        <button onclick="renderFavorietesPokemons()">Favorites</button>
+        <button onclick="sortById()">Startseite</button>
+        <button onclick="sortByName()">Sortieren nach Name</button>
+        <button onclick="sortById()">Sortieren nach ID</button>
+    </header>
+    <main>
+
+        <div id="pokedex" class="pokedex d-none">
+        </div>
+
+        <div id="mainframe" class="mainframe d-none">
+        </div>
+
+    </main>
+
+    <footer>
+        <div id="btn-frame" class="btn-frame">
+            <button id="morePokemonsBtn" onclick="showMorePokemons()">+ Pokemons laden</button>
+            <button id="allPokemonsBtn" onclick="showAllPokemons()"> alle 151 Pokemons laden</button>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>
