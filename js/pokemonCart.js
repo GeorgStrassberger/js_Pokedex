@@ -33,7 +33,7 @@ function renderSingelPokemonCartTypes(i) {
     for (let j = 0; j < myPokemonArray[i]['types'].length; j++) {
         const singelCartType = myPokemonArray[i]['types'][j];
         console.log('newtype: ', singelCartType['type']['name']);
-        document.getElementById('three').innerHTML += `
+        document.getElementById('three').innerHTML += /*html*/ `
             <span class="pokeTyp capitalize ${singelCartType['type']['name']}">${singelCartType['type']['name']}</span>
         `;
     }
@@ -41,53 +41,53 @@ function renderSingelPokemonCartTypes(i) {
 
 
 function renderSinglePokemonCartInfoTableAbout(i) {
-    document.getElementById('tableAbout').innerHTML = `
-        <tr>
-            <td>Species</td>
-            <td>Noch in Arbeit</td>
-        </tr>
-        <tr>
-            <td>Height</td>
-            <td>${myPokemonArray[i]['height']}0 cm</td>
-        </tr>
-        <tr>
-            <td>Weight</td>
-            <td>${myPokemonArray[i]['weight']} kg</td>
-        </tr>
-        <tr>
-            <td>Abilities</td>
-            <td class="capitalize">${myPokemonArray[i]['abilities'][0]['ability']['name']}</td> 
-        </tr>
-    `;
+    document.getElementById('tableAbout').innerHTML = /*html*/ `
+                    <tr>
+                        <td>Species</td>
+                        <td>Noch in Arbeit</td>
+                    </tr>
+                    <tr>
+                        <td>Height</td>
+                        <td>${myPokemonArray[i]['height']}0 cm</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>${myPokemonArray[i]['weight']} kg</td>
+                    </tr>
+                    <tr>
+                        <td>Abilities</td>
+                        <td class="capitalize">${myPokemonArray[i]['abilities'][0]['ability']['name']}</td> 
+                    </tr>
+                `;
 }
 
 function renderSinglePokemonCartInfoTableBaseStats(i) {
-    document.getElementById('tableBaseStats').innerHTML = `
-    <tr class="uppercase">
-        <td>${myPokemonArray[i]['stats'][0]['stat']['name']}</td>
-        <td>${myPokemonArray[i]['stats'][0]['base_stat']}</td>
-    </tr>
-    <tr class="capitalize">
-        <td>${myPokemonArray[i]['stats'][1]['stat']['name']}</td>
-        <td>${myPokemonArray[i]['stats'][1]['base_stat']}</td>
-    </tr>
-    <tr class="capitalize">
-        <td>${myPokemonArray[i]['stats'][2]['stat']['name']}</td>
-        <td>${myPokemonArray[i]['stats'][2]['base_stat']}</td>
-    </tr>
-    <tr class="capitalize">
-        <td>${myPokemonArray[i]['stats'][3]['stat']['name']}</td>
-        <td>${myPokemonArray[i]['stats'][3]['base_stat']}</td>
-    </tr>
-    <tr class="capitalize">
-        <td>${myPokemonArray[i]['stats'][4]['stat']['name']}</td>
-        <td>${myPokemonArray[i]['stats'][4]['base_stat']}</td>
-    </tr>
-    <tr class="capitalize">
-        <td>${myPokemonArray[i]['stats'][5]['stat']['name']}</td>
-        <td>${myPokemonArray[i]['stats'][5]['base_stat']}</td>
-    </tr>
-    `;
+    document.getElementById('tableBaseStats').innerHTML = /*html*/ `
+                <tr class="uppercase">
+                    <td>${myPokemonArray[i]['stats'][0]['stat']['name']}</td>
+                    <td>${myPokemonArray[i]['stats'][0]['base_stat']}</td>
+                </tr>
+                <tr class="capitalize">
+                    <td>${myPokemonArray[i]['stats'][1]['stat']['name']}</td>
+                    <td>${myPokemonArray[i]['stats'][1]['base_stat']}</td>
+                </tr>
+                <tr class="capitalize">
+                    <td>${myPokemonArray[i]['stats'][2]['stat']['name']}</td>
+                    <td>${myPokemonArray[i]['stats'][2]['base_stat']}</td>
+                </tr>
+                <tr class="capitalize">
+                    <td>${myPokemonArray[i]['stats'][3]['stat']['name']}</td>
+                    <td>${myPokemonArray[i]['stats'][3]['base_stat']}</td>
+                </tr>
+                <tr class="capitalize">
+                    <td>${myPokemonArray[i]['stats'][4]['stat']['name']}</td>
+                    <td>${myPokemonArray[i]['stats'][4]['base_stat']}</td>
+                </tr>
+                <tr class="capitalize">
+                    <td>${myPokemonArray[i]['stats'][5]['stat']['name']}</td>
+                    <td>${myPokemonArray[i]['stats'][5]['base_stat']}</td>
+                </tr>
+                `;
 }
 
 function showAbout() {

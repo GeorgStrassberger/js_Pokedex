@@ -6,8 +6,6 @@ let loadMorePokemons = 20;
 let minCountOfPokemons = 1;
 let maxCountentOfPokemons = 31;
 
-
-
 async function init() {
     await loadPokedex();
 }
