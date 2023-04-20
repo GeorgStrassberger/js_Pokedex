@@ -1,11 +1,7 @@
 "use strict";
 
-function renderLoadingButten() {
-	document.getElementById("morePokemonsBtn").innerText = `+ ${loadMorePokemons}
-    Pokemons`; // Text vom BTN ändern auf den Wert der Variable
-}
-
 function showMorePokemons() {
+	showLoadingScreen();
 	if (myPokemonArray.length < 152 - loadMorePokemons) {
 		minCountOfPokemons = maxCountentOfPokemons;
 		maxCountentOfPokemons = maxCountentOfPokemons + loadMorePokemons;

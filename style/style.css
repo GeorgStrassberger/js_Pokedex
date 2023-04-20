@@ -4,7 +4,6 @@
 }
 
 body {
-	margin: 0;
 	font-family: "Pokemon Solid", sans-serif;
 	font-weight: normal;
 	line-height: 16px;
@@ -13,6 +12,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
+
+	background-color: whitesmoke;
 }
 
 main {
@@ -91,8 +92,40 @@ footer {
 	justify-content: space-evenly;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
+	.header__images {
+		justify-content: center;
+	}
+
+	.nav {
+		gap: 16px;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+
 	.pokedex_logo {
 		display: none;
+	}
+
+	main {
+		margin-top: 300px;
+	}
+}
+
+@media only screen and (max-width: 520px) {
+	main {
+		margin-top: 370px;
+	}
+}
+
+@media only screen and (max-width: 300px) {
+	main {
+		margin-top: 500px;
+	}
+
+	.btn-frame {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
 	}
 }

@@ -4,7 +4,7 @@ let myPokemonArray = [];
 let mySinglePokemon;
 let loadMorePokemons = 20;
 let minCountOfPokemons = 1;
-let maxCountentOfPokemons = 5;
+let maxCountentOfPokemons = 21;
 
 let pokedexHTML = document.getElementById("pokedex");
 
