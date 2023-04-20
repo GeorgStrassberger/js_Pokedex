@@ -9,10 +9,13 @@
 
         <title>Pokedex</title>
         <link rel="icon" type="image/x-icon" href="../img/pokeball.png" />
-        <link rel="stylesheet" href="../style/load.css" />
+        <link rel="stylesheet" href="../style/loader.css" />
         <link rel="stylesheet" href="../style/style.css" />
+        <link rel="stylesheet" href="../style/pokedex.css">
         <link rel="stylesheet" href="../style/pokemonCart.css" />
         <link rel="stylesheet" href="../style/colors.css" />
+        <link rel="stylesheet" href="../style/button.css">
+        <link rel="stylesheet" href="../style/helper.css">
 
         <script src="../js/template.js" defer></script>
         <script src="../js/loader.js" defer></script>
@@ -28,6 +31,7 @@
     </head>
 
     <body id="body" onload="init()">
+        <!-- loader -->
         <div id="page-loader" class="page-loader">
             <div class="update-loader">
                 <span></span>
@@ -40,28 +44,33 @@
             <h2>Loading Pokemon ...</h2>
         </div>
 
-        <header>
-            <img class="pokedex_logo" src="../img/PokedexBild.png" alt="pokedex" onclick="sortById()" />
-            <img id="pokemon_logo" src="../img/logo.png" alt="PokemonLogo" onclick="playingAudio()" />
-            <input type="search" name="search" id="search" />
-            <button onclick="renderFavorietesPokemons()">Favorites</button>
-            <button onclick="sortById()">Startseite</button>
-            <button onclick="sortByName()">Sortieren nach Name</button>
-            <button onclick="sortById()">Sortieren nach ID</button>
+        <header id="header">
+            <div class="header__images">
+                <img id="pokemon_logo" src="../img/logo.png" alt="PokemonLogo" onclick="sortById()" />
+                <img class="pokedex_logo" src="../img/PokedexBild.png" alt="pokedex" onclick="playingAudio()" />
+            </div>
+            <nav class="nav">
+                <button class="btn" onclick="sortById()">Startseite</button>
+                <button class="btn" onclick="renderFavorietesPokemons()">Favorites</button>
+                <input class="nav__search" placeholder="Suche nach Name" type="search" name="search" id="search" />
+                <button class="btn" onclick="sortByName()">Sortieren <br> nach Name</button>
+                <button class="btn" onclick="sortById()">Sortieren <br> nach ID</button>
+            </nav>
         </header>
+
         <main>
             <div id="pokedex" class="pokedex d-none"></div>
 
             <div id="mainframe" class="mainframe d-none"></div>
         </main>
 
-        <footer>
+        <footer id="footer">
             <div id="btn-frame" class="btn-frame">
-                <button id="morePokemonsBtn" onclick="showMorePokemons()">
+                <button id="morePokemonsBtn" class="btn" onclick="showMorePokemons()">
                     + Pokemons laden
                 </button>
-                <button id="allPokemonsBtn" onclick="showAllPokemons()">
-                    alle 151 Pokemons laden
+                <button id="allPokemonsBtn" class="btn" onclick="showAllPokemons()">
+                    alle 151 <br> Pokemons
                 </button>
             </div>
         </footer>

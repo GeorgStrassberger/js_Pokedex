@@ -1,7 +1,6 @@
 "use strict";
 let favoritePokemonsIdOnly = [];
 let favoritePokemons = [];
-let vorhanden = false;
 
 function checkPokemonInArray(i) {
 	if (favoritePokemonsIdOnly.includes(myPokemonArray[i].id)) {
@@ -47,5 +46,4 @@ function renderFavorietesPokemons() {
 			pokemonCartHTML(currentPokemon);
 		renderPokemonTypes(currentPokemon);
 	}
-	closePokemonCart();
 }

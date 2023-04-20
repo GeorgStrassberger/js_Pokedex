@@ -1,3 +1,5 @@
+"use strict";
+
 function pokemonCartHTML(currentPokemon) {
 	return `
     <div id="${currentPokemon["name"]}" class="pokemon-cart ${
@@ -5,7 +7,7 @@ function pokemonCartHTML(currentPokemon) {
 	}" onclick="openPokemonCart(${currentPokemon["id"] - 1})">
         <div class="cartHeader">
             <div class="cardnr">#${leftFillNum(currentPokemon.id, 3)}</div>
-            <div class="cardname">${currentPokemon["name"]}</div>
+            <div class="cardname pokeFontColor">${currentPokemon["name"]}</div>
         </div>
         <div id="TypesFrom${currentPokemon["name"]}" class="pokemonTypes">
             <span class="pokemonType">${
@@ -71,29 +73,33 @@ function renderSinglePokemonCartInfoTableBaseStats(i) {
 
 function renderSinglePokemonCart(i) {
 	document.getElementById("mainframe").innerHTML = `
-    <div id="cartframe" class="cartframe">
-        <div class="cartheader">
-            <div class="cartbtn">
+    <div id="cartframe" class="card ${myPokemonArray[i]["types"][0]["type"]["name"]}">
+        <div class="card__header">
+            <div class="card__header-btn">
                 <img src="../img/icons/arrow-121-24.png" alt="arrowback" onclick="closePokemonCart()">
                 <img id="like_${myPokemonArray[i]["name"]}" src="../img/icons/favorite-3-24.png" alt="heart" onclick="like(${i})">
             </div>
-            <div class="one">
-                <div class="two">
-                    <span id="pokeName" class="pokeName capitalize">['name']</span>
-                    <div id="three" class="three">
-                        <span class="pokeTyp">Type1</span>
-                        <span class="pokeTyp">Type2</span>
+            <div class="card__header-content">
+                <div class="card__header-info">
+                    <span id="pokeName" class="card__header-name capitalize pokeFontColor">['name']</span>
+                    <div id="pokeTypes" class="card__header-types">
+                        <span class="card__header-type pokeFontColor">Type1</span>
+                        <span class="card__header-type pokeFontColor">Type2</span>
                     </div>
                 </div>
-                <div class="pokeID">
+                <div class="card__header-ID">
                     <span id="pokeID">#001</span>
                 </div>
             </div>
-            <div class="pokeImges">
+            <div class="card__header-images">
+                <div class="pre" onclick="previousPokemon(${i})"> < </div>
+                <div class="next" onclick="nextPokemon(${i})"> > </div>
+
                 <img class="pokeImgBG" src="../img/pokemonball-draw.png" alt="pokeball"        >
                 <img id="pokeImg" class="pokeImg" src="../img/pokemon-1536848_640.png" alt="PokeImage">
             </div>
         </div>
+        
                             <!--der Weiße bereich-->
         <div class="statsframe">
             <div class="statsContainer">

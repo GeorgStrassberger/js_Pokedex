@@ -4,7 +4,9 @@ let myPokemonArray = [];
 let mySinglePokemon;
 let loadMorePokemons = 20;
 let minCountOfPokemons = 1;
-let maxCountentOfPokemons = 31;
+let maxCountentOfPokemons = 5;
+
+let pokedexHTML = document.getElementById("pokedex");
 
 async function init() {
 	await loadPokedex();
@@ -27,7 +29,7 @@ function renderContent() {
 	renderPokemonCarts();
 	hideLoadingScreen();
 }
-let pokedexHTML = document.getElementById("pokedex");
+
 function renderPokemonCarts() {
 	pokedexHTML.innerHTML = ``;
 	for (let i = 0; i < myPokemonArray.length; i++) {
@@ -48,4 +50,12 @@ function renderPokemonTypes(currentPokemon) {
 
 function leftFillNum(num, targetLength) {
 	return num.toString().padStart(targetLength, 0);
+}
+
+function hideElement(id) {
+	document.getElementById(id).classList.add("d-none");
+}
+
+function showElement(id) {
+	document.getElementById(id).classList.remove("d-none");
 }

@@ -8,6 +8,9 @@ function openPokemonCart(i) {
 	document.title = `${myPokemonArray[i]["name"]}`;
 	document.getElementById("about").style.color = "grey";
 	renderSinglePokemonCartInfo(i);
+
+	hideElement("header");
+	hideElement("footer");
 }
 
 function closePokemonCart() {
@@ -15,12 +18,12 @@ function closePokemonCart() {
 	document.getElementById("pokedex").classList.remove("d-none");
 	document.getElementById("mainframe").classList.add("d-none");
 	document.title = `Pokedex`;
+
+	showElement("header");
+	showElement("footer");
 }
 
 function renderSinglePokemonCartInfo(i) {
-	document.getElementById(
-		"cartframe"
-	).style.backgroundColor = `var(--${myPokemonArray[i]["types"][0]["type"]["name"]}-type)`;
 	document.getElementById(
 		"pokeName"
 	).innerHTML = `${myPokemonArray[i]["name"]}`;
@@ -38,12 +41,11 @@ function renderSinglePokemonCartInfo(i) {
 }
 
 function renderSingelPokemonCartTypes(i) {
-	document.getElementById("three").innerHTML = ``;
+	document.getElementById("pokeTypes").innerHTML = ``;
 	for (let j = 0; j < myPokemonArray[i]["types"].length; j++) {
 		const singelCartType = myPokemonArray[i]["types"][j];
-		console.log("newtype: ", singelCartType["type"]["name"]);
-		document.getElementById("three").innerHTML += /*html*/ `
-            <span class="pokeTyp capitalize ${singelCartType["type"]["name"]}">${singelCartType["type"]["name"]}</span>
+		document.getElementById("pokeTypes").innerHTML += /*html*/ `
+		<span class="card__header-type pokeFontColor ${singelCartType["type"]["name"]}">${singelCartType["type"]["name"]}</span>
         `;
 	}
 }
@@ -64,4 +66,20 @@ function showBaseStas() {
 	document.getElementById("about").style.color = "grey";
 	document.getElementById("tableAbout").classList.add("d-none");
 	document.getElementById("tableBaseStats").classList.remove("d-none");
+}
+
+function nextPokemon(i) {
+	if (i === myPokemonArray.length - 1) {
+		openPokemonCart(0);
+	} else {
+		openPokemonCart(i + 1);
+	}
+}
+
+function previousPokemon(i) {
+	if (i === 0) {
+		openPokemonCart(myPokemonArray.length - 1);
+	} else {
+		openPokemonCart(i - 1);
+	}
 }

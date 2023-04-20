@@ -1,0 +1,79 @@
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pokemon-cart {
+  text-transform: capitalize;
+  position: relative;
+  padding: 8px;
+  margin: 8px;
+  color: black;
+  height: 150px;
+  min-width: 220px;
+  border-radius: 16px;
+  background-image: linear-gradient(145deg,
+      rgba(255, 255, 255, 0.5),
+      transparent 80%);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.pokemon-cart:hover {
+  cursor: pointer;
+  transform: rotateX(45deg);
+  transform: scaleX(1.01) scaleY(1.01);
+  box-shadow: 10px 10px 5px #aaaaaa;
+  transition: all 125ms ease-in-out;
+}
+
+.cartHeader {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardnr {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cardname {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.pokemonTypes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.pokemonType {
+  display: flex;
+  justify-content: flex-start;
+  border: black 1px dotted;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  width: 110px;
+  text-transform: none;
+}
+
+.pokemonType img {
+  width: 16px;
+  margin-right: 8px;
+}
+
+.pokemonImage {
+  background-image: url(../img/pokemon-ball-open.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
