@@ -1,26 +1,29 @@
-"use strict"
+"use strict";
 
-let pokemonThema = new Audio('../audio/PokemonTheme.mp3');
-let clickSound = new Audio('../audio/Pokemonmenu.mp3');
+let pokemonThema = new Audio("../audio/PokemonTheme.mp3");
+let clickSound = new Audio("../audio/Pokemonmenu.mp3");
 let playing = true;
 
+pokemonThema.volume = 0.1;
+clickSound.volume = 0.1;
+
 function playingAudio() {
-    playing = !playing;
-    if (!playing) {
-        playPokemonThema();
-    } else {
-        pausePokemonThema();
-    }
+	playing = !playing;
+	if (!playing) {
+		playPokemonThema();
+	} else {
+		pausePokemonThema();
+	}
 }
 
 function playPokemonThema() {
-    pokemonThema.play();
+	pokemonThema.play();
 }
 
 function pausePokemonThema() {
-    pokemonThema.pause();
+	pokemonThema.pause();
 }
 
 function playClickSound() {
-    clickSound.play();
+	clickSound.play();
 }

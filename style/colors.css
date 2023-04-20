@@ -20,7 +20,7 @@
 }
 
 .grass {
-    background-color: var(--grass-type) !important;
+    background-color: var(--grass-type);
 }
 
 .normal {
