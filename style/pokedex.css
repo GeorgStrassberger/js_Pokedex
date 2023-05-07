@@ -52,15 +52,13 @@
 }
 
 .pokemonType {
-  display: flex;
-  justify-content: flex-start;
   border: black 1px dotted;
   font-size: 0.8rem;
   border-radius: 8px;
   margin-bottom: 8px;
   padding: 8px;
   width: 110px;
-  text-transform: none;
+  text-transform: lowercase;
 }
 
 .pokemonType img {

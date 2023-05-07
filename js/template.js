@@ -6,7 +6,10 @@ function pokemonCartHTML(currentPokemon) {
 		currentPokemon["types"][0]["type"]["name"]
 	}" onclick="openPokemonCart(${currentPokemon["id"] - 1})">
         <div class="cartHeader">
-            <div class="cardnr">#${leftFillNum(currentPokemon.id, 3)}</div>
+            <div class="cardnr pokefont">#${leftFillNum(
+							currentPokemon.id,
+							3
+						)}</div>
             <div class="cardname pokeFontColor">${currentPokemon["name"]}</div>
         </div>
         <div id="TypesFrom${currentPokemon["name"]}" class="pokemonTypes">
@@ -87,7 +90,7 @@ function renderSinglePokemonCart(i) {
                         <span class="card__header-type pokeFontColor">Type2</span>
                     </div>
                 </div>
-                <div class="card__header-ID">
+                <div class="pokefont">
                     <span id="pokeID">#001</span>
                 </div>
             </div>
@@ -168,6 +171,7 @@ function renderSinglePokemonCart(i) {
 }
 
 function renderLoadingButten() {
-	document.getElementById("morePokemonsBtn").innerText = `+ ${loadMorePokemons}
-    Pokemons`;
+	document.getElementById(
+		"morePokemonsBtn"
+	).innerText = `+ ${loadMorePokemons} Pokemons`;
 }

@@ -1,0 +1,39 @@
+.header {
+  background-color: tomato;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  height: 5rem;
+  cursor: pointer;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.nav__list-item {
+  list-style: none;
+}
+
+.nav__search {
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  width: 180px;
+}
+
+.nav__select {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}

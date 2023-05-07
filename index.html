@@ -1,79 +1,87 @@
 <!DOCTYPE html>
 <html lang="de">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet" />
 
-        <title>Pokedex</title>
-        <link rel="icon" type="image/x-icon" href="./img/pokeball.png" />
-        <link rel="stylesheet" href="./style/loader.css" />
-        <link rel="stylesheet" href="./style/style.css" />
-        <link rel="stylesheet" href="./style/pokedex.css">
-        <link rel="stylesheet" href="./style/pokemonCart.css" />
-        <link rel="stylesheet" href="./style/colors.css" />
-        <link rel="stylesheet" href="./style/button.css">
-        <link rel="stylesheet" href="./style/helper.css">
+		<title>Pokedex</title>
+		<link rel="icon" type="image/x-icon" href="./img/pokeball.png" />
+		<link rel="stylesheet" href="./style/header.css">
+		<link rel="stylesheet" href="./style/loader.css" />
+		<link rel="stylesheet" href="./style/style.css" />
+		<link rel="stylesheet" href="./style/pokedex.css" />
+		<link rel="stylesheet" href="./style/pokemonCart.css" />
+		<link rel="stylesheet" href="./style/colors.css" />
+		<link rel="stylesheet" href="./style/button.css" />
+		<link rel="stylesheet" href="./style/helper.css" />
+		<link rel="stylesheet" href="./style/footer.css">
 
-        <script src="./js/template.js" defer></script>
-        <script src="./js/loader.js" defer></script>
-        <script src="./js/script.js" defer></script>
-        <script src="./js/search.js" defer></script>
-        <script src="./js/pokemonCart.js" defer></script>
-        <script src="./js/switchtypes.js" defer></script>
-        <script src="./js/pokeSounds.js" defer></script>
-        <script src="./js/favorites.js" defer></script>
-        <script src="./js/sortBy.js" defer></script>
+		<script src="./js/template.js" defer></script>
+		<script src="./js/loader.js" defer></script>
+		<script src="./js/script.js" defer></script>
+		<script src="./js/search.js" defer></script>
+		<script src="./js/pokemonCart.js" defer></script>
+		<script src="./js/switchtypes.js" defer></script>
+		<script src="./js/pokeSounds.js" defer></script>
+		<script src="./js/favorites.js" defer></script>
+		<script src="./js/sortBy.js" defer></script>
 
-        <noscript>Your browser does not support JavaScript!</noscript>
-    </head>
+		<noscript>Your browser does not support JavaScript!</noscript>
+	</head>
 
-    <body id="body" onload="init()">
-        <!-- loader -->
-        <div id="page-loader" class="page-loader">
-            <div class="update-loader">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <h2>Loading Pokemon ...</h2>
-        </div>
+	<body id="body" onload="init()">
+		<!-- loader -->
+		<div id="page-loader" class="page-loader">
+			<div class="update-loader">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<h2>Loading Pokemon ...</h2>
+		</div>
 
-        <header id="header">
-            <div class="header__images">
-                <img id="pokemon_logo" src="./img/logo.png" alt="PokemonLogo" onclick="sortById()" />
-                <img class="pokedex_logo" src="./img/PokedexBild.png" alt="pokedex" onclick="playingAudio()" />
-            </div>
-            <nav class="nav">
-                <button class="poke-btn" onclick="sortById()">Startseite</button>
-                <button class="poke-btn" onclick="renderFavorietesPokemons()">Favorites</button>
-                <input class="nav__search" placeholder="Suche nach Name" type="search" name="search" id="search" />
-                <button class="poke-btn" onclick="sortByName()">Sortieren <br> nach Name</button>
-                <button class="poke-btn" onclick="sortById()">Sortieren <br> nach ID</button>
-            </nav>
-        </header>
+		<header id="header" class="header">
+			<img class="header__logo" src="./img/logo.png" alt="PokemonLogo" onclick="sortById()" />
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__list">
+						<input class="nav__search" placeholder="Search name" type="search" name="search" id="search" />
+					</li>
+					<li class="nav__list">
+						<div class="selcet__container">
+							<label for="sort-select" class="pokefont">Sort Pokemons:</label>
+							<select class="nav__select" name="sort" id="sort-select">
+								<option value="id">ID</option>
+								<option value="name">Name</option>
+							</select>
+						</div>
+					</li>
+					<li class="nav__list-item">
+						<a id="fav-link" class="link pokefont" onclick="renderFavorietesPokemons()">Favorites</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
-        <main>
-            <div id="pokedex" class="pokedex d-none"></div>
+		<main>
+			<div id="pokedex" class="pokedex d-none"></div>
+			<div id="mainframe" class="mainframe d-none"></div>
+		</main>
 
-            <div id="mainframe" class="mainframe d-none"></div>
-        </main>
-
-        <footer id="footer">
-            <div id="btn-frame" class="btn-frame">
-                <button id="morePokemonsBtn" class="poke-btn" onclick="showMorePokemons()">
-                    + Pokemons laden
-                </button>
-                <button id="allPokemonsBtn" class="poke-btn" onclick="showAllPokemons()">
-                    alle 151 <br> Pokemons
-                </button>
-            </div>
-        </footer>
-    </body>
+		<footer id="footer" class="footer">
+			<a id="morePokemonsBtn" class="link pokefont" onclick="showMorePokemons()">
+				+ Pokemons laden
+			</a>
+			<a id="allPokemonsBtn" class="link pokefont" onclick="showAllPokemons()">
+				alle 151 Pokemons
+			</a>
+		</footer>
+	</body>
 
 </html>

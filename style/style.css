@@ -17,115 +17,34 @@ body {
 }
 
 main {
-	margin-top: 220px;
 	flex: 1 0 auto;
 }
 
-/*#### Header #####*/
-
-header {
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
-	z-index: 2;
-	background-image: url(../img/poke-background.png);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border-bottom-left-radius: 16px;
-	border-bottom-right-radius: 16px;
-	display: flex;
-	flex-direction: column;
-	padding-inline: 48px;
+.pokefont {
+	font-family: "Pokemon Solid", sans-serif;
+	color: #ffcc01;
+	text-shadow: 4px 0 #395ba8, -4px 0 #395ba8, 0 4px #395ba8, 0 -4px #395ba8,
+		1px 1px #395ba8, -1px 1px #395ba8, 1px 1px #395ba8, 1px -1px #395ba8,
+		2px 2px #395ba8, -2px -2px #395ba8, 2px -2px #395ba8, -2px 2px #395ba8,
+		3px 3px #395ba8, -3px -3px #395ba8, 3px -3px #395ba8, -3px 3px #395ba8;
 }
 
-.header__images {
-	display: flex;
-	padding-top: 16px;
-	justify-content: space-between;
-}
-
-.header__images img {
-	height: 100px;
-}
-
-.nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-block: 16px;
-}
-
-.nav__search {
-	border-radius: 16px;
-	height: 48px;
-	font-size: 16px;
-	padding-left: 8px;
-}
-
-header img {
+.link {
+	padding: 6px 24px;
+	text-decoration: none;
+	font-size: 1rem;
 	cursor: pointer;
 }
 
-.pokedex_logo {
-	height: 100px;
+.link:hover {
+	opacity: 0.8;
+	transform: scale(1.05);
 }
 
-/*###### FOOTER ###########*/
+@media only screen and (max-width: 1000px) {}
 
-footer {
-	margin-top: 12px;
-	padding-inline: 48px;
-	padding-block: 16px;
-	background-image: url(../img/poke-background.png);
-	background-position: bottom;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border-top-left-radius: 16px;
-	border-top-right-radius: 16px;
-	flex: 0 0 100px;
-}
+@media only screen and (max-width: 700px) {}
 
-.btn-frame {
-	display: flex;
-	justify-content: space-evenly;
-}
+@media only screen and (max-width: 520px) {}
 
-@media only screen and (max-width: 700px) {
-	.header__images {
-		justify-content: center;
-	}
-
-	.nav {
-		gap: 16px;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-	}
-
-	.pokedex_logo {
-		display: none;
-	}
-
-	main {
-		margin-top: 300px;
-	}
-}
-
-@media only screen and (max-width: 520px) {
-	main {
-		margin-top: 370px;
-	}
-}
-
-@media only screen and (max-width: 300px) {
-	main {
-		margin-top: 500px;
-	}
-
-	.btn-frame {
-		display: flex;
-		flex-direction: column;
-		gap: 16px;
-	}
-}
+@media only screen and (max-width: 300px) {}

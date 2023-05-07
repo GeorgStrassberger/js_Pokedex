@@ -36,12 +36,6 @@
     z-index: 2;
 }
 
-/* .card__header-btn img:hover {
-    cursor: pointer;
-    background-color: rgba(128, 128, 128, 0.3);
-    border-radius: 8px;
-} */
-
 .card__header-content {
     display: flex;
     justify-content: space-between;
@@ -71,11 +65,6 @@
     border-radius: 8px;
 }
 
-.card__header-ID {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-}
 
 .card__header-images {
     padding-top: 8px;

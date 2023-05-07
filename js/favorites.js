@@ -1,6 +1,7 @@
 "use strict";
 let favoritePokemonsIdOnly = [];
 let favoritePokemons = [];
+let showFavorites = false;
 
 function checkPokemonInArray(i) {
 	if (favoritePokemonsIdOnly.includes(myPokemonArray[i].id)) {
@@ -37,6 +38,20 @@ function deleteFromFavorites(i) {
 	document.getElementById(`like_${myPokemonArray[i]["name"]}`).src =
 		"../img/icons/favorite-3-24.png";
 }
+
+const favLink = document.getElementById("fav-link");
+
+favLink.addEventListener("click", () => {
+	if (!showFavorites) {
+		renderFavorietesPokemons();
+		favLink.innerHTML = "Home";
+		showFavorites = true;
+	} else {
+		renderPokemonCarts();
+		favLink.innerHTML = "Favorites";
+		showFavorites = false;
+	}
+});
 
 function renderFavorietesPokemons() {
 	document.getElementById("pokedex").innerHTML = ``;

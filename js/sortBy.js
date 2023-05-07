@@ -1,4 +1,22 @@
 "use strict";
+const selectField = document.getElementById("sort-select");
+selectField.addEventListener("change", (e) => {
+	console.log("onConsole", e);
+	console.log("onConsole", e.target.value);
+	if (e.target.value === "name") {
+		sortByName();
+	}
+	if (e.target.value === "id") {
+		sortById();
+	}
+});
+
+function onSubmit(e) {
+	console.log("submit", e);
+}
+function onConsole() {
+	console.log("onConsole");
+}
 
 function dynamicSort(property) {
 	var sortOrder = 1;
