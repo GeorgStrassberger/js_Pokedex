@@ -8,11 +8,9 @@ body {
 	font-weight: normal;
 	line-height: 16px;
 	letter-spacing: 2px;
-
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
-
+	height: 100dvh;
 	background-color: whitesmoke;
 }
 
@@ -23,10 +21,7 @@ main {
 .pokefont {
 	font-family: "Pokemon Solid", sans-serif;
 	color: #ffcc01;
-	text-shadow: 4px 0 #395ba8, -4px 0 #395ba8, 0 4px #395ba8, 0 -4px #395ba8,
-		1px 1px #395ba8, -1px 1px #395ba8, 1px 1px #395ba8, 1px -1px #395ba8,
-		2px 2px #395ba8, -2px -2px #395ba8, 2px -2px #395ba8, -2px 2px #395ba8,
-		3px 3px #395ba8, -3px -3px #395ba8, 3px -3px #395ba8, -3px 3px #395ba8;
+	text-shadow: 4px 0 #395ba8, -4px 0 #395ba8, 0 4px #395ba8, 0 -4px #395ba8, 1px 1px #395ba8, -1px 1px #395ba8, 1px 1px #395ba8, 1px -1px #395ba8, 2px 2px #395ba8, -2px -2px #395ba8, 2px -2px #395ba8, -2px 2px #395ba8, 3px 3px #395ba8, -3px -3px #395ba8, 3px -3px #395ba8, -3px 3px #395ba8;
 }
 
 .link {
